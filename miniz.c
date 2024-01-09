@@ -179,12 +179,12 @@ MINIZ_EXPORT void *miniz_def_realloc_func(void *opaque, void *address, size_t it
     return MZ_REALLOC(address, items * size);
 }
 
+#ifndef MINIZ_NO_ZLIB_APIS
+
 const char *mz_version(void)
 {
     return MZ_VERSION;
 }
-
-#ifndef MINIZ_NO_ZLIB_APIS
 
 #ifndef MINIZ_NO_DEFLATE_APIS
 
